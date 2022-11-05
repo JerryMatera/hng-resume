@@ -14,6 +14,7 @@ import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -96,7 +97,8 @@ fun ResumeDetail(modifier: Modifier = Modifier) {
                                 Uri.parse("https://github.com/JerryMatera")
                             )
                         )
-                    }
+                    },
+                tint = Color.Unspecified
             )
             Icon(
                 painter = painterResource(id = R.drawable.linkedin),
@@ -110,7 +112,8 @@ fun ResumeDetail(modifier: Modifier = Modifier) {
                                 Uri.parse("https://www.linkedin.com/in/jerryonyango/")
                             )
                         )
-                    }
+                    },
+                tint = Color.Unspecified
             )
             Icon(
                 painter = painterResource(id = R.drawable.twitter),
@@ -124,7 +127,8 @@ fun ResumeDetail(modifier: Modifier = Modifier) {
                                 Uri.parse("https://twitter.com/jerryMatera")
                             )
                         )
-                    }
+                    },
+                tint = Color.Unspecified
             )
         }
         Text(
