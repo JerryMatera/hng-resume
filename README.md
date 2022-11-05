@@ -1,5 +1,5 @@
 # HNG Reume
-  This i a mobile version of my reume built with Android, Kotlin and Jetpack compose. It's an assignment task for stage 2 mobile track of the HNGi9 internship
+  This is a mobile version of my resume built with Android, Kotlin and Jetpack compose. It's an assignment task for stage 2 mobile track of the HNGi9 internship
   
 # Design
   The application design i self created but influenced to a certain extent by the task's project design sample.
