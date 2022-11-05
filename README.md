@@ -24,8 +24,8 @@
  - Jetpack Compose
 
 # How to run the app
-  1.To run the app and look at the codebase, you can either clone the repository locally with ``` git clone https://github.com/JerryMatera/hng-resume.git``` and open the project with android studio.
-  2 .
+  - To run the app and look at the codebase, you can either clone the repository locally with ``` git clone https://github.com/JerryMatera/hng-resume.git``` and open the project with android studio.
+  - Use demo version available [appetize.io](https://appetize.io/app/3xuzpffynw3i7myem7oyk4z6mm?device=pixel4&osVersion=11.0&scale=75)
  
 # Challenges
  - With little experience on XML or Compose which made accomplishing the task hard regardles of the choice, i had to learn to learn Jetpack compose within the deadline inorder to do the task.
