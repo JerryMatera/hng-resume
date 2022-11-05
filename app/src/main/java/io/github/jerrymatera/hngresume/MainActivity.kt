@@ -3,15 +3,20 @@ package io.github.jerrymatera.hngresume
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Scaffold
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.*
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import io.github.jerrymatera.hngresume.ui.theme.HNGResumeTheme
 
 class MainActivity : ComponentActivity() {
@@ -19,35 +24,117 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             HNGResumeTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    ResumeApp()
-                }
+                ResumeApp()
             }
         }
     }
 }
 
+
 @Composable
 fun ResumeApp() {
-    Scaffold() {
-
+    Scaffold {
+        Resume()
     }
 }
 
 @Composable
 fun Resume(modifier: Modifier = Modifier) {
-    Column {
-
+    Column(
+        modifier = modifier
+            .fillMaxWidth()
+            .padding(16.dp)
+    ) {
+        ProfileImage(modifier = modifier.align(Alignment.CenterHorizontally))
+        ResumeDetail()
     }
 }
 
-@Preview(showBackground = true)
 @Composable
-fun DefaultPreview() {
+fun ResumeDetail(modifier: Modifier = Modifier) {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = modifier
+    ) {
+        Text(
+            text = "Okoth Jerry Onyango",
+            fontFamily = FontFamily.Default,
+            fontSize = 24.sp,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier
+                .padding(top = 8.dp, bottom = 8.dp)
+        )
+        Text(
+            text = "Android Engineer",
+            fontFamily = FontFamily.Default,
+            fontWeight = FontWeight.SemiBold,
+            fontSize = 16.sp
+
+        )
+        Row(
+            horizontalArrangement = Arrangement.spacedBy(16.dp),
+            modifier = Modifier
+                .padding(16.dp, 8.dp)
+        ) {
+            Icon(
+                painter = painterResource(id = R.drawable.github),
+                contentDescription = "Github",
+                modifier = Modifier
+                    .size(32.dp)
+                    .clickable { }
+            )
+            Icon(
+                painter = painterResource(id = R.drawable.linkedin),
+                contentDescription = "linkedIn",
+                modifier = Modifier
+                    .size(32.dp)
+                    .clickable { }
+            )
+            Icon(
+                painter = painterResource(id = R.drawable.twitter),
+                contentDescription = "Twitter",
+                modifier = Modifier
+                    .size(32.dp)
+                    .clickable { }
+            )
+        }
+        Text(
+            text = "Bio",
+            fontFamily = FontFamily.Default,
+            fontWeight = FontWeight.SemiBold,
+            fontSize = 24.sp,
+            modifier = Modifier.align(Alignment.Start)
+        )
+        Text(
+            text = stringResource(R.string.bio_description),
+            fontFamily = FontFamily.Default,
+            fontWeight = FontWeight.Normal,
+            fontSize = 20.sp
+        )
+    }
+
+}
+
+@Composable
+fun ProfileImage(modifier: Modifier = Modifier) {
+    Surface(
+        color = MaterialTheme.colors.background,
+        elevation = 8.dp,
+        modifier = modifier
+    ) {
+        Image(
+            painter = painterResource(id = R.drawable.profile),
+            contentDescription = null,
+            modifier = Modifier
+                .size(300.dp)
+        )
+    }
+}
+
+
+@Preview(showBackground = true, showSystemUi = true)
+@Composable
+fun ResumeApp2Preview() {
     HNGResumeTheme {
         ResumeApp()
     }

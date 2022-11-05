@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">HNG resume</string>
+    <string name="bio_description">I\'m a versatile software engineer with a year\'s worth of experience. I have keen interest in building mobile application solutions with Android and Kotlin and Flutter</string>
 </resources>
