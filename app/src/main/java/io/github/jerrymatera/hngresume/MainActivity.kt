@@ -168,7 +168,7 @@ fun ProfileImage(modifier: Modifier = Modifier) {
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
-fun ResumeApp2Preview() {
+fun ResumeAppPreview() {
     HNGResumeTheme {
         ResumeApp()
     }
