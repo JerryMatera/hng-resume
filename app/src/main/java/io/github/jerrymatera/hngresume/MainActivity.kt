@@ -1,5 +1,7 @@
 package io.github.jerrymatera.hngresume
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -12,6 +14,7 @@ import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
@@ -55,6 +58,7 @@ fun Resume(modifier: Modifier = Modifier) {
 
 @Composable
 fun ResumeDetail(modifier: Modifier = Modifier) {
+    val context = LocalContext.current
 
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -86,7 +90,12 @@ fun ResumeDetail(modifier: Modifier = Modifier) {
                 modifier = Modifier
                     .size(32.dp)
                     .clickable {
-
+                        context.startActivity(
+                            Intent(
+                                Intent.ACTION_VIEW,
+                                Uri.parse("https://github.com/JerryMatera")
+                            )
+                        )
                     }
             )
             Icon(
@@ -95,7 +104,12 @@ fun ResumeDetail(modifier: Modifier = Modifier) {
                 modifier = Modifier
                     .size(32.dp)
                     .clickable {
-
+                        context.startActivity(
+                            Intent(
+                                Intent.ACTION_VIEW,
+                                Uri.parse("https://www.linkedin.com/in/jerryonyango/")
+                            )
+                        )
                     }
             )
             Icon(
@@ -104,7 +118,12 @@ fun ResumeDetail(modifier: Modifier = Modifier) {
                 modifier = Modifier
                     .size(32.dp)
                     .clickable {
-//
+                        context.startActivity(
+                            Intent(
+                                Intent.ACTION_VIEW,
+                                Uri.parse("https://twitter.com/jerryMatera")
+                            )
+                        )
                     }
             )
         }
