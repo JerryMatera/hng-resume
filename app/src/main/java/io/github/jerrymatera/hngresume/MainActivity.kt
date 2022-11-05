@@ -6,6 +6,8 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -44,6 +46,7 @@ fun Resume(modifier: Modifier = Modifier) {
         modifier = modifier
             .fillMaxWidth()
             .padding(16.dp)
+            .verticalScroll(rememberScrollState())
     ) {
         ProfileImage(modifier = modifier.align(Alignment.CenterHorizontally))
         ResumeDetail()
@@ -52,6 +55,7 @@ fun Resume(modifier: Modifier = Modifier) {
 
 @Composable
 fun ResumeDetail(modifier: Modifier = Modifier) {
+
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = modifier
@@ -81,21 +85,27 @@ fun ResumeDetail(modifier: Modifier = Modifier) {
                 contentDescription = "Github",
                 modifier = Modifier
                     .size(32.dp)
-                    .clickable { }
+                    .clickable {
+
+                    }
             )
             Icon(
                 painter = painterResource(id = R.drawable.linkedin),
                 contentDescription = "linkedIn",
                 modifier = Modifier
                     .size(32.dp)
-                    .clickable { }
+                    .clickable {
+
+                    }
             )
             Icon(
                 painter = painterResource(id = R.drawable.twitter),
                 contentDescription = "Twitter",
                 modifier = Modifier
                     .size(32.dp)
-                    .clickable { }
+                    .clickable {
+//
+                    }
             )
         }
         Text(
@@ -114,6 +124,7 @@ fun ResumeDetail(modifier: Modifier = Modifier) {
     }
 
 }
+
 
 @Composable
 fun ProfileImage(modifier: Modifier = Modifier) {
