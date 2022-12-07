@@ -18,16 +18,16 @@ fun ResumeApp(modifier: Modifier = Modifier) {
     Scaffold {
         NavHost(
             navController = navController,
-            startDestination =Destinations.Home.route,
+            startDestination = Destinations.Home.route,
             modifier = modifier.padding(it)
         ) {
-            composable(route = Destinations.Home.route){
-                Home()
+            composable(route = Destinations.Home.route) {
+                Home(navController)
             }
-            composable(route = Destinations.About.route){
+            composable(route = Destinations.About.route) {
                 About()
             }
-            composable(route = Destinations.Work.route){
+            composable(route = Destinations.Work.route) {
                 Work()
             }
         }
