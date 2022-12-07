@@ -1,5 +1,5 @@
 # HNG Reume
-  This i a mobile version of my reume built with Android, Kotlin and Jetpack compose. It's an assignment task for stage 2 mobile track of the HNGi9 internship
+  This is a mobile version of my resume built with Android, Kotlin and Jetpack compose. It's an assignment task for stage 2 mobile track of the HNGi9 internship
   
 # Design
   The application design i self created but influenced to a certain extent by the task's project design sample.
@@ -26,6 +26,7 @@
 # How to run the app
   - To run the app and look at the codebase, you can either clone the repository locally with ``` git clone https://github.com/JerryMatera/hng-resume.git``` and open the project with android studio.
   - Use demo version available [appetize.io](https://appetize.io/app/3xuzpffynw3i7myem7oyk4z6mm?device=pixel4&osVersion=11.0&scale=75)
+  - Or download the debug APK link at [HNG Resume](app/build/outputs/apk/debug/app-debug.apk)
  
 # Challenges
  - With little experience on XML or Compose which made accomplishing the task hard regardles of the choice, i had to learn to learn Jetpack compose within the deadline inorder to do the task.
